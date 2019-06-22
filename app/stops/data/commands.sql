@@ -1,0 +1,1 @@
+\copy stops(tipo,calle,numero,entre1,entre2,lineas,dir_norm,metrobus,stop_desc,x,y,geom,geom_98334) from '/home/ivan/Projects/real/python/django/colectivos-api/app/stops/data/paradas-de-colectivo.csv' delimiter ';' encoding 'latin3' csv header
