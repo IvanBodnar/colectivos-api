@@ -17,8 +17,18 @@ class Stop(models.Model):
     geom = models.PointField(null=True)
     geom_98334 = models.PointField(srid=98334, null=True)
 
+    @property
+    def location(self):
+        if self.calle and self.numero:
+            name = f'{self.calle} {self.numero}'
+        elif self.stop_desc:
+            name = str(self.stop_desc).replace('&&', ' y ')
+        else:
+            name = 'no name assigned'
+        return name
+
     class Meta:
         db_table = 'stops'
 
     def __str__(self):
-        return f'Stop id: {self.id}'
+        return f'Location: {self.location} | id: {self.id}'
