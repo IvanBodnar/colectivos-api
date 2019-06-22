@@ -106,3 +106,7 @@ venv.bak/
 
 # Ide
 .idea/
+
+# General
+*.csv
+*.csv#
