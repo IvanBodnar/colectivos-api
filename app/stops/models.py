@@ -20,5 +20,5 @@ class Stops(models.Model):
     class Meta:
         db_table = 'stops'
 
-    def __repr__(self):
+    def __str__(self):
         return f'Stop id: {self.id}'
