@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import Stops
+from .models import Stop
 
-admin.site.register(Stops)
+admin.site.register(Stop)

@@ -2,7 +2,7 @@ from django.contrib.gis.db import models
 from django.contrib.postgres.fields import ArrayField
 
 
-class Stops(models.Model):
+class Stop(models.Model):
     tipo = models.CharField(max_length=255, null=True)
     calle = models.CharField(max_length=255, null=True)
     numero = models.IntegerField(null=True)
