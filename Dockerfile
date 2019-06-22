@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
 
-RUN apt update && apt install postgresql-server-dev-all -y
+RUN apt update && apt install postgresql-server-dev-all binutils libproj-dev gdal-bin -y
 
 RUN pip install -r /requirements.txt
 
