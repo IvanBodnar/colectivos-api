@@ -110,3 +110,4 @@ venv.bak/
 # General
 *.csv
 *.csv#
+db_backups/
