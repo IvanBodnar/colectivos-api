@@ -1,6 +1,7 @@
 from django.test import TestCase
 
 from .models import Stop
+from .geo_fns import point_4326_to_98334
 
 
 class StopTests(TestCase):
@@ -18,3 +19,11 @@ class StopTests(TestCase):
     def test_str(self):
         stop = Stop.objects.get(calle='test')
         self.assertEqual(str(stop), f'Location: test 111 | id: {stop.id}')
+
+
+class GeoFnsTests(TestCase):
+
+    def test_point_4326_to_98334(self):
+        x = -58.486159
+        y = -34.659705
+        self.assertEqual(point_4326_to_98334(x, y).tuple, (97904.64416263279, 96623.46773679997))
