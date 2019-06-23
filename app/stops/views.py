@@ -1,9 +1,9 @@
-from rest_framework import viewsets, mixins
+from rest_framework.generics import ListAPIView
 
 from .models import Stop
 from .serializers import StopSerializer
 
 
-class StopViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
+class StopListView(ListAPIView):
     queryset = Stop.objects.all()
     serializer_class = StopSerializer
