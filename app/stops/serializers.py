@@ -8,5 +8,5 @@ class StopSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Stop
-        fields = ('id', 'tipo', 'location', 'lineas')
+        fields = ('id', 'tipo', 'location', 'lineas', 'x', 'y')
         read_only_fields = ('id',)
